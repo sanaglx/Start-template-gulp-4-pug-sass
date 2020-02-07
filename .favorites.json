@@ -1,0 +1,29 @@
+[
+    {
+        "type": "File",
+        "name": "g:\\WEB2\\app_1\\dev\\pug\\index.pug",
+        "parent_id": null,
+        "fsPath": "g:\\WEB2\\app_1\\dev\\pug\\index.pug",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "KUNlroATmVvXJpjL"
+    },
+    {
+        "type": "File",
+        "name": "g:\\WEB2\\app_1\\dev\\static\\styles\\modules\\modules.scss",
+        "parent_id": null,
+        "fsPath": "g:\\WEB2\\app_1\\dev\\static\\styles\\modules\\modules.scss",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "mPT75KjIzNSo4py2"
+    },
+    {
+        "type": "File",
+        "name": "g:\\WEB2\\app_1\\build\\index.html",
+        "parent_id": null,
+        "fsPath": "g:\\WEB2\\app_1\\build\\index.html",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "18b2AWauQBtrlXDk"
+    }
+]

@@ -11,6 +11,7 @@ html(lang="ru-RU")
 		<![endif]-->
 		meta(name="viewport" content="width=device-width,initial-scale=1")
 		meta(name="keywords" content="")
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
 		link(rel="stylesheet" type='text/css' href="static/css/styles.min.css")
 
 		<!--[if lt IE 9]>
@@ -19,10 +20,13 @@ html(lang="ru-RU")
 	body
 		.wrapper
 			include ../modules/header/header
-			.content
+			main.content
 				block content
 			include ../modules/footer/footer
 		script(src="static/js/jquery-3.3.1.min.js")
+		script(src="static/js/bootstrap.min.js")
+		script(src="static/js/owl.carousel.min.js")
 		script(src="static/js/libs.min.js")
 		script(src="static/js/main.js")
+		script(src="static/js/custom.js")
 		block script

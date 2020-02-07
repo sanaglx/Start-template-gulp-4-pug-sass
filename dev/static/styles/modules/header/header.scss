@@ -1,1 +1,320 @@
-header { flex: 0 0 auto; }
+body{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #252525;
+}
+a{color: #252525;}
+.mb16{
+  margin-bottom: 16px;
+}
+
+.header {
+        ul{
+            margin: 0;
+            padding: 0;
+        }
+
+    .top-line {
+        background: #F6F6F6;
+        width: 100%;
+        overflow: hidden;
+    }
+    .top-menu {
+        display: flex;
+        align-items: center;
+        &__ul {
+            list-style: none;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            li{
+                margin-right: 20px;
+              a{
+                  line-height: 38px;
+              }   
+            }
+        }
+    }
+    .whod {
+        font-size: 14px;
+      a{
+          color: #BB0497;
+          font-weight: 600; 
+      } 
+    }
+    .logo {
+        text-align: center;
+    }
+
+    .heder-blok-top {
+        display: flex;
+    }
+    .login-form {
+        display: flex;
+        flex:1;
+    }
+    .lofin-form-left {
+      flex: 1;
+      input{
+          border:none;
+          padding: 11px 0;
+          border-bottom: 1px solid #DBDBDB;
+          display: block;
+          width: 100%;
+          
+      }
+    }
+    .login-form-right {
+      margin-left: 20px;
+    }
+
+    .btn-yellow {
+      background: #FDEB04;
+      border-radius: 3px; 
+      font-size: 14px;
+      line-height: 19px;
+      text-align: center;
+      color: #333333;
+      line-height: 40px;
+      width: 126px;
+      display: block;
+
+      &:hover{
+        background: #eee;
+        transition: all 0.3s;
+        text-decoration: none;
+      }
+      span{
+        padding-left: 19px;
+        position: relative;
+        
+        &::before{
+          position: absolute;
+          content:"";
+          background:url(../images/icon/login-button.png) no-repeat;
+          width: 16px;height: 16px;top: 4px;left: 0;
+      }
+      }
+    
+    }
+    .forget{
+      text-align: center;
+      color: #BB0497;
+      padding: 11px 0;
+      display: block; 
+    }
+
+    .heder-phone {
+      display: flex;
+      align-items: center;
+      border: 1px solid #F2F2F2;
+      box-sizing: border-box;
+      border-radius: 3px;
+      padding: 8px 20px;
+      margin-left: 26px;
+
+        &__icon {
+          padding-right:18px ;
+        }
+        &__block {
+          a{
+            font-size: 14px;
+            display: block;
+          color: #000000;
+          line-height: 19px;
+          }
+          .sred {
+            font-size: 12px;
+            color: #BB0497;
+            line-height: 19px;
+          }
+        }
+    }
+
+    .izbran {
+      display: flex;
+      align-items: center;
+        border-radius: 3px;
+        margin: 0 0 12px;
+        &_left {
+          background: rgba(253, 235, 4, 0.3);
+          flex:1;
+          line-height: 33px;
+          text-align: center;
+          color:#000;
+          span{
+            font-size: 12px;
+            position: relative;
+            padding-left:22px ;
+            color: #252525;
+          }
+          span::before{
+            position: absolute;
+            content:"";
+            background:url(../images/icon/serdc.png) no-repeat;
+            width: 21px;height: 20px;top: 1px;left: 0;
+            background-size: 16px;
+        }
+          &:hover{
+            background: rgba(253, 235, 4, 0.6);
+            text-decoration: none;
+            color:#777;
+          }
+        }
+
+        &_right {
+          background: #FDEB04;
+          width: 33px;line-height: 33px;
+          text-align: center;
+          border-radius: 3px;
+        }
+    }
+    .btn-registr {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      background: #BB0497;
+      border-radius: 3px;
+      color:#fff;
+      display: block;
+      &:hover{
+        background: rgb(41, 34, 34);
+        text-decoration: none;
+      }
+      span{
+        line-height: 33px;
+        position: relative;
+        padding-left: 24px;
+      }
+      span::before{
+        position: absolute;
+        content:"";
+        background:url(../images/icon/register.png) no-repeat;
+        width: 21px;height: 20px;top: 1px;left: 0;
+        background-size: 16px;
+    }
+
+    }
+
+    .laska-red {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      background: #BB0497;
+      border:1px solid #BB0497;
+      border-radius: 3px;
+      color:#fff;
+      padding: 12px;
+      a{
+        display: block;
+        height: 16px; width: 16px;
+        img{width: 16px;display: block;}
+      
+      }
+      .mob-kn-text { 
+        font-size: 14px;
+        margin-left: 20px;
+      }
+    }
+    .form-search {
+        input{
+          background: #F7F7F7;
+          border-radius: 3px;
+          border:1px solid #F7F7F7;
+          line-height: 40px;
+          width: 100%;
+          font-size: 14px;
+          padding: 0 0 0 20px;
+          position: relative;
+        }
+      .btn-main-search {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background: #FDEB04;
+        border-radius: 3px;
+        right: 20px;
+        top: 6px;
+        border: none;
+        &::before{
+          content: "";
+          position: absolute;
+          background: url(../images/icon/lupa.png) no-repeat;
+          top: 6px;left: 7px;width: 17px;height: 17px;
+        }
+      }
+    }
+
+    .cart-main {
+      border: 1px solid #BB0497;
+      box-sizing: border-box;
+      border-radius: 3px;
+      display: flex;
+      
+      .cart-left {
+        background: #BB0497;
+        border-radius: 3px;
+        width: 54px;
+        line-height: 40px;
+
+        img{padding-left: 8px;}
+      }
+      .cart-main-block{
+        width: 100%;
+        text-align: center;
+      }
+      .cart-k {
+        line-height: 40px
+      }
+      .cart-sum {
+        line-height: 40px
+      }
+    }
+}
+
+.top-line-mob-kn{display: none;}
+.logo-modil{display: none;}
+
+@media(max-width:1200px){
+  .m16-md{
+    margin-bottom: 16px;
+  }
+
+}
+@media(max-width:992px){
+  .header .form-search input {font-size: 12px;padding: 0 0 0 10px;}
+}
+@media(max-width:768px){
+  .top-line-mob-kn{display: block;position: absolute;top: 8px;right: 12px;}
+  .md-xs-16{margin-bottom: 16px;}
+  .header .top-line {height: 40px;}
+  .header .top-menu {align-items: self-start;flex-direction: column;position: absolute;right: 0; top: 39px;background: #f6f6f6;z-index: 10;
+                       padding: 10px 30px 20px 30px;margin-right: -100%; transition: all 0.3s;}
+  .header .top-menu.active{margin-right: 0; transition: all 0.3s;}                     
+  .header .top-menu__ul {align-items: flex-start;flex-direction: column;}
+  .header .top-menu__ul li a {line-height:30px;}
+  .header .whod a {line-height: 40px;}
+
+  .header .heder-blok-top {flex-direction: column;}
+  .header .heder-phone {    margin: 10px 0 -7px; border: none;}
+  .heder-phone__block{display: flex;justify-content: space-between;width: 100%;flex-wrap: wrap;}
+  .header .heder-phone__block a {padding:0 7px;}
+
+  .logo{
+    display: none;
+  }
+  .logo-modil img {
+      width: 93px;
+      margin: 5px 15px;
+  }
+
+}
+@media(max-width:567px){
+
+}
+@media(max-width:384px){
+
+}

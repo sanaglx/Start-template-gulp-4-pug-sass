@@ -4,3 +4,55 @@ block variables
 	- var title = 'Главная страница'
 
 block content
+	.container
+		.row
+			.col-lg-3
+				.prop-block
+					.prop-new
+						img(src="static/images/icon/new.svg")
+						.prop-new__text
+					.prop-new
+						img(src="static/images/icon/hit.svg")
+						.prop-new__text
+					.prop-new
+						img(src="static/images/icon/proc.svg")
+						.prop-new__text
+			.col-lg-9
+				include ./modules/slider
+				.b-nr-all
+					.b-mr-element
+						img(src="static/images/b1.jpg")
+						a(href="").b-mr-element__dalee →
+					.b-mr-element
+						img(src="static/images/b2.jpg")
+						a(href="").b-mr-element__dalee →
+					.b-mr-element
+						img(src="static/images/b3.jpg")
+						a(href="").b-mr-element__dalee →
+				.block-carousels
+					.news-carousel
+						h2 Новинки
+						.owl-carousel.owl-tovar-1
+							include ./modules/tovar-kanc
+							+tovar-kanc('tov1.jpg')
+							+tovar-kanc('tov2.jpg')
+							+tovar-kanc('tov3.jpg')
+							+tovar-kanc('tov4.jpg')
+							+tovar-kanc('tov2.jpg')
+					.news-carousel
+						h2 Хиты продаж
+						.owl-carousel.owl-tovar-1
+							+tovar-kanc('tov1.jpg')
+							+tovar-kanc('tov2.jpg')
+							+tovar-kanc('tov3.jpg')
+							+tovar-kanc('tov4.jpg')
+							+tovar-kanc('tov2.jpg')
+					.news-carousel
+						h2 Распродажа
+						.owl-carousel.owl-tovar-1
+							+tovar-kanc('tov1.jpg')
+							+tovar-kanc('tov2.jpg')
+							+tovar-kanc('tov3.jpg')
+							+tovar-kanc('tov4.jpg')
+							+tovar-kanc('tov2.jpg')
+				include ./modules/why-we

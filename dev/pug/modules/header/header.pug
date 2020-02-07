@@ -1,1 +1,65 @@
 header.header
+		.top-line.mb16
+			.logo-modil
+				img(src='static/images/logo.svg')
+			a(href="").top-line-mob-kn
+				img(src="static/images/icon/burger-b.png")
+			.container
+				.row
+					.col-sm-12
+						.top-menu
+							ul.top-menu__ul
+								each val, index in ['Новости и обзоры', 'О нас', 'О сотрудничестве' ,'Оптовикам' ,'Оплата и доставка','Контакт']
+									li
+										a(href = "")=  val
+							.whod
+								a(href="") Войти
+		.heder-line
+			.container.mb16
+				.row
+					.col-lg-3.col-md-3.col-sm-3
+						.logo
+							img(src='static/images/logo.svg')
+					.col-lg-7.col-md-9.col-sm-9.m16-md
+						.heder-blok-top
+							form.login-form
+								.lofin-form-left
+									input(type="text" placeholder="Введите логин") 
+									input(type="text" placeholder="Введите логин")
+								.login-form-right
+									a(href="/").btn-main.btn-yellow.btn-form-login
+										span Войти
+									a(href="").forget Забыли пароль?
+							.heder-phone
+								.heder-phone__icon
+									img(src="static/images/icon/telf-yellow.png")
+								.heder-phone__block
+									a(tel="88630655666") 8 863 065-56-66
+									a(tel="89180655666") 8 918 065-56-66
+									a.sred(href="") Обратный звонок
+					.col-lg-2.col-md-12.col-sm-12
+						.izbran
+							a(href="").izbran_left
+								span Избранное
+							span.izbran_right 3
+						a(href="").btn-main.btn-registr.btn-red
+							span Регистрация
+			.container
+				.row
+					.col-lg-3.col-md-4.col-sm-4.md-xs-16
+						.laska-red
+							a(href="").mob-kn
+								img(src="static/images/icon/mob-kn.png")
+							.mob-kn-text Каталог товаров
+					.col-lg-7.col-md-4.col-sm-5.md-xs-16
+						.heder-blok-bottom 
+							.form-search
+								input(type="text" placeholder="Поиск по названию или артикулу...")
+								button.btn-main-search
+					.col-lg-2.col-md-4.col-sm-3.md-xs-16
+						.cart-main
+							a(href="").cart-left
+								img(src="static/images/icon/shopping-cart.png")
+							.cart-main-block
+								span.cart-k 25 на 
+								span.cart-sum 26 000 р
