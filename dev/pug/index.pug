@@ -4,20 +4,14 @@ block variables
 	- var title = 'Главная страница'
 
 block content
+	include ./modules/menu-vector
+	+menu-vector('do768')
 	.container
 		.row
-			.col-lg-3
-				.prop-block
-					.prop-new
-						img(src="static/images/icon/new.svg")
-						.prop-new__text
-					.prop-new
-						img(src="static/images/icon/hit.svg")
-						.prop-new__text
-					.prop-new
-						img(src="static/images/icon/proc.svg")
-						.prop-new__text
-			.col-lg-9
+			.col-lg-3.col-md-3.col-sm-4
+				+menu-vector('ot768')
+				include ./modules/news		
+			.col-lg-9.col-md-9.col-sm-8
 				include ./modules/slider
 				.b-nr-all
 					.b-mr-element
@@ -55,4 +49,4 @@ block content
 							+tovar-kanc('tov3.jpg')
 							+tovar-kanc('tov4.jpg')
 							+tovar-kanc('tov2.jpg')
-				include ./modules/why-we
+	include ./modules/why-we

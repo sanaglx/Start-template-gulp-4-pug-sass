@@ -1,0 +1,67 @@
+mixin check(name)
+    .pole-chk
+        label.label-check.option
+            input(type="checkbox")#check.label-check__input
+            span.label-check__new-input
+        span= name   
+
+section.filter
+    h3 Сортировать товары
+    .acordion.filter-acrd
+        .accordion_item
+            .title-block Цена
+            .info.active
+                .scroller
+                    span
+                        input(type="text" placeholder="0").scroller__zn#lower-value
+                    span    
+                        input(type="text" placeholder="0").scroller__zn#upper-value
+            //-#nonlinear
+        .accordion_item
+            .title-block Бренд
+            .info
+                +check('ArtSpace')
+                +check('BG')    
+                +check('Erich Krause')    
+                +check('Greenwich Line')    
+                +check('Hatber')
+                a(href="").pokaz Показать все    
+        .accordion_item
+            .title-block Серия
+            .info
+                +check('ArtSpace')
+                +check('BG')    
+                +check('Erich Krause')    
+                +check('Greenwich Line')    
+                +check('Hatber')
+                a(href="").pokaz Показать все  
+        .accordion_item
+            .title-block Вид товара
+            .info
+                +check('ArtSpace')
+                +check('BG')    
+                +check('Erich Krause')    
+                +check('Greenwich Line')    
+                +check('Hatber')
+                a(href="").pokaz Показать все    
+        .accordion_item
+            .title-block Еще фильтр
+            .info
+                +check('ArtSpace')
+                +check('BG')    
+                +check('Erich Krause')    
+                +check('Greenwich Line')    
+                +check('Hatber')
+                a(href="").pokaz Показать все    
+        .accordion_item
+            .title-block Новый фильтр
+            .info
+                +check('ArtSpace')
+                +check('BG')    
+                +check('Erich Krause')    
+                +check('Greenwich Line')    
+                +check('Hatber')
+                a(href="").pokaz Показать все
+    .block-filter-kn            
+        a(href="").btn-filter-grey СБРОСИТЬ
+        a(href="").btn-filter-yellov Применить                

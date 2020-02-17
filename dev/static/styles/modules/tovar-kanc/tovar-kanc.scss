@@ -6,6 +6,9 @@
     height: 399px;
     width: 99.98%;
     text-align: center;
+    &.cat-tov{
+        max-width: 211.8px;
+    }
     ul{
         margin: 0;
         padding: 0;
@@ -64,6 +67,7 @@
   justify-content: space-between;
   margin-bottom: 17px;
 		&__kol {
+            text-align: left;
             span{
                 position: relative;
                 padding-left: 8px;
@@ -87,17 +91,14 @@
             line-height: 22px;
             color: $color-red;
             font-weight: 600;
+            text-align: right;
+            margin-top: -20px;
         }
 }
-.vubor {
+.vubor_kanc { padding-top: 10px;}
 
 
-		&_kanc {}
-}
-.vubor_kanc {
-    border-radius: 3px;
-    display: flex;
-    align-items: baseline;
+
     .pl-mn{
        display: flex;
        padding: 5px 0 7px;
@@ -112,6 +113,13 @@
            padding: 3px;
        }
     }
+
+
+.vubor_kanc {
+    border-radius: 3px;
+    display: flex;
+    align-items: baseline;
+
    
     &__qest {
         background: #F6F6F6;

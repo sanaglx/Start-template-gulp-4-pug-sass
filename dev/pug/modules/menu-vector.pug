@@ -1,0 +1,64 @@
+mixin menu-vector(razm)
+    .nav-vector
+        .prop-block(class = razm) 
+            .prop-new
+                img(src="static/images/icon/new.svg")
+                .prop-new__text Новинки
+            .prop-new
+                img(src="static/images/icon/hit.svg")
+                .prop-new__text Хиты продаж
+            .prop-new
+                img(src="static/images/icon/proc.svg")
+                .prop-new__text Распродажа
+        .menu-vector(class = razm) 
+            .main-menu
+                ul
+                    li
+                        a(href="").main-menu__a Бумажная продукция для офиса
+                        +menu-sub-vector(class = razm,'Бумажная продукция для офиса')
+                    li
+                        a(href="").main-menu__a Бумажная продукция для школы
+                    li
+                        a(href="").main-menu__a Товары для скрепления
+                        +menu-sub-vector(class = razm, 'Товары для скрепления')
+                    li
+                        a(href="").main-menu__a Творчество и хобби
+                    li
+                        a(href="").main-menu__a Блокноты и тетради
+                    li
+                        a(href="").main-menu__a Бумага декоративная
+                    li
+                        a(href="").main-menu__a Бумага техническая
+                    li
+                        a(href="").main-menu__a Бумага художественная
+                    li
+                        a(href="").main-menu__a Вспомогательные средства
+                    li
+                        a(href="").main-menu__a Графические материалы
+                    li
+                        a(href="").main-menu__a Каллиграфия
+                    li
+                        a(href="").main-menu__a Карандаши
+                    li
+                        a(href="").main-menu__a Кисти, мастихины, аксессуары
+                    li
+                        a(href="").main-menu__a Краски
+                    li
+                        a(href="").main-menu__a Маркеры промышленные
+                    li
+                        a(href="").main-menu__a Маркеры художественные
+                    li
+                        a(href="").main-menu__a Мольберты
+                    li
+                        a(href="").main-menu__a Папки и тубусы для бумаги
+                    li
+                        a(href="").main-menu__a Пенокартон и бальза
+                    li
+                        a(href="").main-menu__a Подарки
+                    li
+                        a(href="").main-menu__a Ручки
+                    li
+                        a(href="").main-menu__a Сувениры и подарочная упаковка
+                    li
+                        a(href="").main-menu__a Торговое оборудование  
+        

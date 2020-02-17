@@ -4,3 +4,57 @@ block variables
 	- var title = 'Главная страница'
 
 block content
+	include ./modules/menu-vector
+	include ./modules/tovar-kanc
+	include ./modules/catalog/catalog-mix
+	+menu-vector('do768')
+	
+	.container
+		.row
+			.col-lg-3.col-md-3.col-sm-4
+				+menu-vector('ot768')
+				include ./modules/filter/filter
+	
+			.col-lg-9.col-md-9.col-sm-8
+				section.catalog
+					+breadcrumb('Главная', "Вторая", "Третья")
+					.catalog-tags
+						+catalog-tags-item('Тетради')
+						+catalog-tags-item('Альбомы и папки для творчества')
+						+catalog-tags-item('Бумажная продукция для поделок')
+						+catalog-tags-item('Школьное планирование')
+						+catalog-tags-item('Бумага для чертежных и копировальных работ')
+					h1 Бумажная продукция для офиса	
+					.catalog-filter
+						.cat-filter-first
+							.title Сортировать
+							.cat-filer-sort
+								select.select
+									option(value="test test") По популярности
+									option(value="test test") По популярности
+									option(value="test test") По популярности
+									option(value="test test") По популярности
+						+cat-filter-kol('Товаров на странице',20,40,80)
+						+cat-filter-pagin('Страницы',2,3,"...",15)
+						+cat-filter-vid
+					.catalog-list
+						+tovar-kanc('tov1.jpg','cat-tov')
+						+tovar-kanc('tov2.jpg','cat-tov')
+						+tovar-kanc('tov3.jpg','cat-tov')
+						+tovar-kanc('tov4.jpg','cat-tov')
+						+tovar-kanc('tov2.jpg','cat-tov')
+						+tovar-kanc('tov1.jpg','cat-tov')
+						+tovar-kanc('tov2.jpg','cat-tov')
+						+tovar-kanc('tov3.jpg','cat-tov')
+						+tovar-kanc('tov4.jpg','cat-tov')
+						+tovar-kanc('tov2.jpg','cat-tov')
+						+tovar-kanc('tov1.jpg','cat-tov')
+						+tovar-kanc('tov2.jpg','cat-tov')
+						+tovar-kanc('tov3.jpg','cat-tov')
+						+tovar-kanc('tov4.jpg','cat-tov')
+						+tovar-kanc('tov2.jpg','cat-tov')
+						+tovar-kanc('tov2.jpg','cat-tov')
+					.catalog-filter-fot
+						+cat-filter-kol('Товаров на странице',20,40,80)
+						+cat-filter-pagin('Страницы',2,3,"...",15)
+	+why-we-small

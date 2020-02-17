@@ -22,14 +22,7 @@ header.header
 							img(src='static/images/logo.svg')
 					.col-lg-7.col-md-9.col-sm-9.m16-md
 						.heder-blok-top
-							form.login-form
-								.lofin-form-left
-									input(type="text" placeholder="Введите логин") 
-									input(type="text" placeholder="Введите логин")
-								.login-form-right
-									a(href="/").btn-main.btn-yellow.btn-form-login
-										span Войти
-									a(href="").forget Забыли пароль?
+							+login-form(1)  //- Сюда поставить 2 для автаризованого пользователя
 							.heder-phone
 								.heder-phone__icon
 									img(src="static/images/icon/telf-yellow.png")
@@ -63,3 +56,10 @@ header.header
 							.cart-main-block
 								span.cart-k 25 на 
 								span.cart-sum 26 000 р
+						.cart-min-list
+							+cart-min-element('tov1.jpg','471.00 руб')
+							+cart-min-element('tov2.jpg','1471.00 руб')
+							+cart-min-element('tov3.jpg','450.00 руб')
+							+cart-min-element('tov4.jpg','2471.00 руб')
+							a(href="").in-basaket В корзину
+							

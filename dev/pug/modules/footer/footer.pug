@@ -1,1 +1,37 @@
 footer.footer
+    .container
+        .row
+            .col-lg-12
+                .f-block-all
+                    .f-block1
+                        +socseti('do768')
+                        a.logo-fot(href="")
+                            img(src="static/images/logo.svg", alt="")
+                        .copyr © Copyright 2019. Все права защищены
+                        .foot-klientu
+                            a.policy Политика конфиденциальности 
+                            a.dogovor Договор оферты
+                    .f-block2        
+                        .f-block2-phone
+                            .f-block2-phone-b
+                                .f-block2-phone__icon
+                                    img(src="static/images/icon/telf-yellow.png")
+                                .f-block2-phone__block
+                                    a(tel="88630655666") 8 863 065-56-66
+                                    a(tel="89180655666") 8 918 065-56-66
+                                    a.sred(href="") Обратный звонок
+                            a.f-block2-eml(href="mailto:info@vektorkanc.ru")  info@vektorkanc.ru
+                            span.f-block2-eml   Адрес: Атлант-Сити 2
+                    .f-block3
+                        ul.nav-footer
+                            each val, index in ['Контакты','Оплата и доставка', 'О нас', 'Новости и обзоры', 'Оптовикам', 'Сертификаты', 'Совместные покупки']
+                                li
+                                    a(href="")=val 
+                    .f-block4
+                        +socseti('ot768')
+                        .f-block4__2        
+                            .wjon
+                                img(src="static/images/icon/webjon.jpg", alt="")  
+                                span   Разработано <br> стдуией -
+                                a(href="") WebJon                          
+                            

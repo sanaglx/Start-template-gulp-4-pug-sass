@@ -10,8 +10,31 @@ a{color: #252525;}
 .mb16{
   margin-bottom: 16px;
 }
+input{
+  outline:none;
+  &:focus,
+  &:active{
+    outline:none;
+  }
+}
+.geo{
+  display: flex;
+  align-items: center;
+  flex:1;
+  &__img{
+    margin-right: 20px;
+  }
+  &__adr p{
+    font-size: 14px;
+    line-height: 19px;
+    color: #000000;
+    display: block;
+    margin: 0;padding: 0;
+  }
+}
 
 .header {
+  //overflow: hidden;
         ul{
             margin: 0;
             padding: 0;
@@ -20,7 +43,6 @@ a{color: #252525;}
     .top-line {
         background: #F6F6F6;
         width: 100%;
-        overflow: hidden;
     }
     .top-menu {
         display: flex;
@@ -64,7 +86,8 @@ a{color: #252525;}
           border-bottom: 1px solid #DBDBDB;
           display: block;
           width: 100%;
-          
+          background: transparent;
+          outline: none;
       }
     }
     .login-form-right {
@@ -275,8 +298,46 @@ a{color: #252525;}
     }
 }
 
+.cart-min-list {
+  display: none;
+  box-shadow: 0 0 15px #ccc;
+  position: absolute;
+  z-index: 10;
+  background: #fff;
+  right: 15px;
+  width: 250px;
+  padding: 10px;
+  &.active{
+    display: block;
+  }
+}
+a.in-basaket{padding-left: 5px;color:$color-red;}
+a.del-m-cart{
+  position: absolute;
+  right: 0;top: 0;
+  img{width: 8px;}
+}
+.cart-min-element {
+  position: relative;
+  margin-bottom: 15px;
+  img{width: 48px;margin-right: 10px; float: left;display: block;}
+  .kanc-articul{margin-bottom: 0px; line-height: 14px;}
+  p{white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 14px;margin-bottom:5px;}
+  .block-cena {
+    display: flex;
+    span{flex:1;text-align: right;}
+    .vubor_kanc__qest{line-height: 12px;}
+    span{margin-top: 5px;}
+    .pl-mn{padding: 0;margin: 0;}
+    input{font-size: 14px;width: 30px;}
+    .minus{line-height: 16px;}
+    .plus{line-height: 19px;}
+  }
+}
+
 .top-line-mob-kn{display: none;}
 .logo-modil{display: none;}
+.geo-all {display: flex; flex:1;}
 
 @media(max-width:1200px){
   .m16-md{
@@ -286,14 +347,43 @@ a{color: #252525;}
 }
 @media(max-width:992px){
   .header .form-search input {font-size: 12px;padding: 0 0 0 10px;}
+
 }
 @media(max-width:768px){
+  .geo-all {display: flex; 
+    .geo{    flex: 0 0 39%;
+      margin-left: 20px;
+    }
+  }
   .top-line-mob-kn{display: block;position: absolute;top: 8px;right: 12px;}
   .md-xs-16{margin-bottom: 16px;}
   .header .top-line {height: 40px;}
-  .header .top-menu {align-items: self-start;flex-direction: column;position: absolute;right: 0; top: 39px;background: #f6f6f6;z-index: 10;
+ /* .header .top-menu {align-items: self-start;flex-direction: column;position: absolute;right: 0; top: 39px;background: #f6f6f6;z-index: 10;
                        padding: 10px 30px 20px 30px;margin-right: -100%; transition: all 0.3s;}
-  .header .top-menu.active{margin-right: 0; transition: all 0.3s;}                     
+  */
+                    .header .top-menu {
+                        align-items: self-start;
+                        flex-direction: column;
+                        position: absolute;
+                        right: 0;
+                        top: 39px;
+                        background: #f6f6f6;
+                        z-index: -1;
+                        padding: 10px 30px 20px 30px;
+                       // transition: all 0.3s;
+                        height: 0px;
+                        overflow: hidden;
+                        top: 0;
+                    }                     
+                       
+ /* .header .top-menu.active{margin-right: 0; transition: all 0.3s;}  */
+  .header .top-menu.active{
+    margin-right: 0; //transition: all 0.3s;
+    top: 40px;
+    height: auto;
+   // transition: all 0.3s;
+    z-index: 10;
+  }                    
   .header .top-menu__ul {align-items: flex-start;flex-direction: column;}
   .header .top-menu__ul li a {line-height:30px;}
   .header .whod a {line-height: 40px;}
@@ -313,6 +403,9 @@ a{color: #252525;}
 
 }
 @media(max-width:567px){
+  .top-line.mb16{margin: 0;}
+  .geo-all{display: none;}
+  .header .login-form {margin-top: 16px;}
 
 }
 @media(max-width:384px){

@@ -1,0 +1,31 @@
+mixin catalog-tags-item(name)
+    .catalog-tags-item
+        a(href="")= name
+mixin cat-filter-vid
+    .cat-filter-vid
+        a(href="").active#cat1
+        a(href="")#cat2
+        a(href="")#cat3 
+
+mixin cat-filter-pagin(name,...items)
+    .cat-filter-pagin
+        .title= name
+        ul
+            li
+                a(href="").active 1
+            each item in items
+                li
+                    a= item
+                    
+mixin cat-filter-kol(name,...items)
+    .cat-filter-pagin
+        .title= name
+        ul
+            each item in items
+                li
+                    a= item
+mixin tovar-prop-foot(name,zn)
+    .tovar-prop-foot
+        .tovar-prop-foot__name= name
+        .tovar-prop-foot__zn= zn
+                                                  

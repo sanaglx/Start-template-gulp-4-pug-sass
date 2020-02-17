@@ -1,3 +1,24 @@
+
+.prop-block {
+margin-top: 15px;
+margin-bottom: 10px;
+}
+.prop-new {
+ display: flex;
+ align-items: center;
+ background: #F6F6F6;
+border-radius: 3px;
+margin-bottom: 4px;
+
+    img{
+        padding: 8px 10px 8px 8px;
+    }
+	&__text {
+        line-height: 26px;
+        color: #333333;
+    }
+}
+
 .carousel.slide{
     margin-top:15px ;
 }
@@ -32,13 +53,10 @@
        content: "  →";
    }
 }
-h2{
+h1, h2, h3{
     font-size: 20px;
     line-height: 27px;
     color: #252525; 
-}
-.block-carousels{
-     
 }
 
 .left{

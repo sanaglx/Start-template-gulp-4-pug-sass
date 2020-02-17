@@ -5,5 +5,141 @@ mixin icon(name,mod)
 	else
 		svg(class="svg-sprite-icon icon-" + name)
 			use(xlink:href="static/images/svg/symbol/sprite.svg#" + name)
-mixin test()
-	h1 name			
+mixin vubor-kanc()
+		.vubor_kanc__qest
+			.pl-mn
+				.minus
+					i -
+				input(type="text" value="1") 
+				.plus
+					i +
+mixin cart-min-element(imgx,cena)
+	.cart-min-element
+		img(src="static/images/"+imgx, alt="")
+		.block-har
+			.kanc-articul 10256654
+			p Бумага офисная А4, класс "C", SVETOCOPY, 80 г/м2, 500 л., International Pape
+			.block-cena
+				+vubor-kanc()
+				span= cena
+		a.del-m-cart(href="")
+			img(src="static/images/icon/x.svg", alt="")
+
+mixin menu-sub-vector(razm, titlx)
+	.menu-sub-vector(class = razm) 
+		span= titlx
+		.vn-block
+			a(href="").close-x
+				img(src="static/images/icon/x.svg", alt="")
+			ul.submenu-a
+				li 
+					a(href="") Бумажная продукция для заметок
+					ul.submenu-b
+						li 
+							a(href="") Записные книжки, блокноты (39)
+						li 
+							a(href="") Флажки-закладки, блоки самоклеящиеся (12)
+				li 
+					a(href="") Папки
+					ul.submenu-b
+						li 
+							a(href="") Папки с принтом (10)
+						li 
+							a(href="") Ручки, карандаши Ручки, карандаши (26)
+						li 
+							a(href="") Сувениры, подарки Декоративные мелочи (24)
+						li 
+							a(href="") Игрушки-антистресс (8)
+						li 
+							a(href="") Термосы, кружки (6)
+				li 
+					a(href="") Бумажная продукция для заметок
+					ul.submenu-b
+						li 
+							a(href="") Записные книжки, блокноты (39)
+						li 
+							a(href="") Флажки-закладки, блоки самоклеящиеся (12)
+				li 
+					a(href="") Бумажная продукция для заметок
+					ul.submenu-b
+						li 
+							a(href="") Записные книжки, блокноты (39)
+						li 
+							a(href="") Флажки-закладки, блоки самоклеящиеся (12)
+				li 
+					a(href="") Бумажная продукция для заметок
+					ul.submenu-b
+						li 
+							a(href="") Записные книжки, блокноты (39)
+						li 
+							a(href="") Флажки-закладки, блоки самоклеящиеся (12)
+
+mixin heder-phone()
+	.header
+		.heder-phone
+			.heder-phone__icon
+				img(src="static/images/icon/telf-yellow.png")
+			.heder-phone__block
+				a(tel="88630655666") 8 863 065-56-66
+				a(tel="89180655666") 8 918 065-56-66
+				a.sred(href="") Обратный звонок
+		if block
+			block
+
+mixin socseti(razm)
+	.soc(class=razm)
+		a.soc__el(href="")
+			img(src="static/images/icon/facebook-logo-button.png", alt="")                        
+		a.soc__el(href="")
+			img(src="static/images/icon/youtube-logotype.png", alt="")                        
+		a.soc__el(href="")
+			img(src="static/images/icon/vk-social-logotype.png", alt="")                        
+		a.soc__el(href="")
+			img(src="static/images/icon/instagram-logo.png", alt="")
+
+mixin login-form(Yesx)
+	if Yesx == 1
+		form.login-form
+			.lofin-form-left
+				input(type="text" placeholder="Введите логин") 
+				input(type="text" placeholder="Введите логин")
+			.login-form-right
+				a(href="/").btn-main.btn-yellow.btn-form-login
+					span Войти
+				a(href="").forget Забыли пароль?
+
+	else if Yesx == 2	
+		.geo-all
+			.geo
+				img(src="static/images/icon/geo.svg").geo__img
+				.geo__adr
+					p г. Ростов-на-Дону,
+					p Атлант-Сити 2	
+			.geo
+				img(src="static/images/icon/telf2.svg").geo__img
+				.geo__adr
+					p 8 863 065-56-66
+					p 8 918 065-56-66
+	else
+	
+mixin breadcrumb(...arr)
+	ul.breadcrumb
+		each item in arr
+			li
+				a(href="")= item
+mixin why-we-small
+	.why-we
+		.container
+			.row
+				.col-lg-8.col-md-6.col-sm-8
+					.bkg-white
+						h3.h3-p1 Вектор - бесконечность сервиса
+						p Наша компания является официальным представителем следующих торговых марок: канцтоваров и товаров для офиса Brauberg; надежных калькуляторов Staff; товаров для учебы и творчества Пифагор; бизнес аксессуаров и деловых подарков Galant; мебели для офиса Brabix; бытовой техники Sonnen; хозяйственных товаров Лайма и оригинальной посуды Waltz.
+						p Комфортную покупку. Вам не нужно тратить время на дорогу и поиски товара. Мы предоставляем Вам возможность совершать покупки в любое удобное для Вас время: в рабочие часы или после работы, в будни и выходные дни.
+						p Качественное обслуживание клиента — это основа нашей деятельности. Ваши заказы оперативно доставляются. Вы получаете грамотные консультации по выбору и подбору наиболее подходящих товаров, а также при необходимости помощь в их установке и сборке.
+				.col-lg-4.col-md-6.col-sm-4
+					h3 Мы специализируемся на следующих товарных категориях:
+					ul.spec-tk
+						each val, index in ['товары для офиса, канцелярские товары', 'бумага и бумажная продукция', 'офисная и бытовая техника', 'компьютерная техника', 'электроника и аксессуары', 'товары для школы', 'корпусная и металлическая мебель для офиса', 'хозтовары и упаковочные материалы']
+							li
+								span=val

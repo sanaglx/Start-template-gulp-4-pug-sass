@@ -36,7 +36,7 @@ $('.owl-tovar-1').owlCarousel({
             
           },
           768:{
-              items:3,
+              items:2,
               nav: true,
           },
 
@@ -45,4 +45,32 @@ $('.owl-tovar-1').owlCarousel({
               nav: true,
           }
         }
-      });
+});
+
+// cart 
+$('.cart-left').click(function () {
+    if(!$('.cart-min-list').hasClass('active')){
+        $('.cart-min-list').addClass('active');
+    }else{
+        $('.cart-min-list').removeClass('active');
+    }
+    return false;
+  })
+
+  ///////////////цена + -/////////////////////////////
+$(document).ready(function() {
+    $('.minus').click(function () {
+        var $input = $(this).parent().find('input');
+        var count = parseInt($input.val()) - 1;
+        count = count < 1 ? 1 : count;
+        $input.val(count);
+        $input.change();
+        return false;
+    });
+    $('.plus').click(function () {
+        var $input = $(this).parent().find('input');
+        $input.val(parseInt($input.val()) + 1);
+        $input.change();
+        return false;
+    });
+  });
